@@ -1,0 +1,125 @@
+.cart__list {
+	width: 100%;
+	background-color: white;
+	border-radius: 40px;
+	position: absolute;
+	top: 50px;
+	right: -2000px;
+	transition: 0.3s ease all;
+	padding: 10px 0px 0px 0px;
+	box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.75);
+	max-height: 500px;
+	overflow: auto;
+}
+.show-cart {
+	transition: 0.3s ease all;
+	right: -90px;
+}
+.cart__close {
+	width: 30px;
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	cursor: pointer;
+	transition: 0.3s all ease;
+	&:hover {
+		transition: 0.3s all ease;
+		transform: scale(1.3);
+	}
+}
+.cart__title {
+	font-family: "Josefin-m";
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	h1 {
+		border-bottom: 1px solid rgb(142, 142, 142);
+	}
+}
+.cart_empty {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.cart_empty__img {
+	opacity: 0.6;
+	margin: 20px auto;
+	width: 300px;
+}
+.cart_empty__title {
+	font-family: "Josefin-sb";
+	font-size: 24px;
+	border-top: 1px solid rgb(142, 142, 142);
+	padding-top: 15px;
+	text-align: center;
+}
+.cart__content {
+	padding: 5px 15px;
+}
+.cart__item {
+	border-bottom: 1px solid rgb(142, 142, 142);
+	padding-bottom: 15px;
+	padding-top: 15px;
+	position: relative;
+	&:last-child {
+		border: none;
+	}
+}
+.cart__item_close {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 10px;
+	cursor: pointer;
+	transition: 0.3s all ease;
+	&:hover {
+		transition: 0.3s all ease;
+		transform: scale(1.3);
+	}
+}
+.cart__row {
+	display: flex;
+}
+.cart__img {
+	width: 120px;
+	height: 135px;
+}
+.cart__info {
+	margin-left: 15px;
+}
+.cart__title {
+	font-size: 18px;
+}
+.cart__price {
+	font-family: "Josefin-sb";
+	margin-top: 10px;
+	font-size: 22px;
+	span {
+		font-family: "Josefin-l";
+	}
+}
+.cart__quintity {
+	margin-top: 5px;
+}
+.cart__btn {
+	display: flex;
+	img {
+		transition: 0.3s all ease;
+		width: 25px;
+		margin-right: 10px;
+		cursor: pointer;
+	}
+}
+.cart__btn img:hover {
+	transition: 0.3s all ease;
+	transform: rotate(360deg);
+}
+.cart__total__price {
+	font-size: 24px;
+	text-align: center;
+	padding: 10px 0px;
+	background-color: black;
+	color: white;
+	span {
+		font-family: "Josefin-sb";
+	}
+}

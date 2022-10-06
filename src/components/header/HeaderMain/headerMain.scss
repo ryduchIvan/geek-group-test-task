@@ -1,0 +1,69 @@
+.header__main {
+	margin-top: 20px;
+}
+.header__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.header__logo {
+}
+.header__search {
+}
+.header__btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 129px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 18px;
+	border: none;
+	background: #2d3132;
+	border-radius: 4px;
+	color: white;
+}
+.header__language {
+	display: flex;
+}
+.header__language-text {
+	font-size: 12px;
+	line-height: 150%;
+	margin-right: 4px;
+}
+.header__language-arrow {
+}
+.header__features {
+	display: flex;
+	align-items: center;
+}
+.header__features-item {
+	position: relative;
+	margin-left: 12px;
+}
+.header__heart {
+}
+.header__heart-img {
+}
+.header__quantity-heart {
+}
+.quantity {
+	position: absolute;
+	top: -13px;
+	right: -5px;
+}
+.header__message {
+}
+.header__quantity-message {
+}
+.header__cart {
+}
+.header__quantity-cart {
+}
+.header__avatart {
+	display: flex;
+	margin-left: 24px;
+}
+.header__avatar-img {
+}

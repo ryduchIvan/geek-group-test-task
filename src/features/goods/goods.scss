@@ -1,0 +1,153 @@
+.main {
+	margin-top: 150px;
+	width: 100%;
+}
+.container {
+	position: relative;
+}
+.main__grid {
+	width: 60px;
+	height: 30px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 0px;
+	right: 30px;
+}
+.main__grid_item {
+	width: 25px;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	cursor: pointer;
+}
+.grid__two__item {
+	flex: 0 1 40%;
+	height: 100%;
+	border: 2px solid black;
+}
+.main__four__item {
+	flex: 0 1 45%;
+	height: 45%;
+	border: 2px solid black;
+	margin-bottom: 3px;
+}
+
+.main__row {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.main__catalog {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	min-height: 550px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.catalog__item {
+	border-radius: 15px;
+	flex: 0 1 24%;
+	padding: 20px;
+	margin-left: 11px;
+	max-height: 520px;
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.55);
+	position: relative;
+}
+.catalog__item_big {
+	flex: 0 1 49%;
+	text-align: center;
+	margin: 0px auto;
+	margin-bottom: 15px;
+}
+.item__img {
+	height: 335px;
+	width: 100%;
+	max-width: 300px;
+	margin: 0px auto;
+	cursor: pointer;
+}
+.item__title {
+	margin-top: 13px;
+	font-family: "Josefin-m";
+	font-size: 18px;
+}
+
+.item__price {
+	font-family: "Josefin-sb";
+	font-size: 24px;
+	display: flex;
+	justify-content: space-between;
+}
+.item__favorite_img {
+	cursor: pointer;
+	width: 40px;
+}
+.item__img_box:hover {
+	cursor: pointer;
+	.item__opened__popup {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+.item__opened__popup {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(255, 255, 255, 0.899);
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+}
+.item__btn__popup {
+	border: 3px solid white;
+	background: none;
+	padding: 10px 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 20px;
+}
+.pagination__list {
+	display: flex;
+	justify-content: center;
+}
+.pagination__link {
+	display: block;
+	color: black;
+	font-size: 30px;
+	margin-left: 30px;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+@media (max-width: 1345px) {
+	.catalog__item {
+		flex: 0 1 32%;
+		margin-bottom: 10px;
+	}
+	.main__grid {
+		display: none;
+	}
+}
+@media (max-width: 1060px) {
+	.catalog__item {
+		flex: 0 1 48%;
+	}
+}
+@media (max-width: 900px) {
+	.main__row {
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,16 @@
+.header__promo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 44px;
+	background: #cbdcff;
+}
+.header__promo-images {
+	display: flex;
+	margin-right: 10px;
+}
+.header__promo-image {
+	object-fit: cover;
+}
+.header__promo-title {
+}
