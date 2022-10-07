@@ -7,6 +7,7 @@ import "./headerIndex.scss";
 import {CartList} from "../../features/cart/CartList";
 import { HeaderPromo } from "./HeaderPromo/HeaderPromo";
 import {HeaderMain} from "./HeaderMain/HeaderMain";
+import {HeaderNav} from "./HeaderNav/HeaderNav";
 //Select
 import {selectCart} from "../../features/cart/cart-slice";
 //Instruments
@@ -21,6 +22,7 @@ export const HeaderIndex = () =>{
 			<HeaderPromo/>
 			<div className="header__container container">
 				<HeaderMain/>
+				<HeaderNav/>
 			</div>
 		</header>
 	)

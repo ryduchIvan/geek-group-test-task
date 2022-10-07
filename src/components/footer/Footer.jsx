@@ -1,16 +1,28 @@
 //CSS
 import "./footer.scss";
-import ShopLogo from "../../assets/img/Shop-w.svg";
-
+//Img
+import GooglePlay from "assets/img/google-play.jpg"
+//Components
+import { FooterList } from "./footerList/FooterList";
 function Footer() {
-	return(
-	<footer className="footer">
-		<div className="footer__container container">
-			<div className="footer__content">
-				<img className="footer__logo" src={ShopLogo} alt="shop-logo"></img>
-				<h4>Created by RYDUCH</h4>
+	const footerFirstList = ["Довідка для покупців", "Отримати підтримку", "Як купувати","Як залишити корисний відкуг", "Програма Захисту Покупців","Рекомендації з беспечних покупок"];
+	const footerSecondList = ["Довідка для продавців", "Як почати продавати" ,"Тарифи" , "Угода користувача" , "Політика конфіденційності", "Правила користвуання порталом", "Бонусна програма"];
+	const footerThirdList = ["Про нас","Довідка та FAQ", "Захист легальност контенту", "Адміністрація", "Вакансії"];
+ 	return(
+	<footer class="footer">
+		<div class="footer__container container">
+			<div class="footer__content">
+				<div class="footer__row">
+					<FooterList list={footerFirstList}/>
+					<FooterList list={footerSecondList}/>
+					<FooterList list={footerThirdList}/>
+					<ul className="footer__list">
+						<li className="footer__list-link">Мобільний додаток</li>
+						<img src={GooglePlay} alt="google-play" className="footer__img"/>
+					</ul>
+				</div>
+				<p className="footer__data">© 2022 Monvalise</p>
 			</div>
-			<p className="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente minus ducimus delectus consequuntur mollitia voluptate, eos laudantium beatae reiciendis facere, et corrupti commodi culpa a, dolor quia totam temporibus dolorum?</p>
 		</div>
 	</footer>
 	)

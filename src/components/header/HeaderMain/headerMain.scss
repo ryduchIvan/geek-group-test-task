@@ -1,5 +1,9 @@
+@import "variabels.scss";
+.container {
+}
 .header__main {
 	margin-top: 20px;
+	position: relative;
 }
 .header__row {
 	display: flex;
@@ -9,6 +13,7 @@
 .header__logo {
 }
 .header__search {
+	max-width: 639px;
 }
 .header__btn {
 	display: flex;
@@ -20,7 +25,7 @@
 	font-size: 12px;
 	line-height: 18px;
 	border: none;
-	background: #2d3132;
+	background: $black;
 	border-radius: 4px;
 	color: white;
 }
@@ -40,7 +45,16 @@
 }
 .header__features-item {
 	position: relative;
-	margin-left: 12px;
+	width: 44px;
+	height: 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.header__icon {
+	width: 20.5px;
 }
 .header__heart {
 }
@@ -50,12 +64,25 @@
 }
 .quantity {
 	position: absolute;
-	top: -13px;
-	right: -5px;
+	top: 4px;
+	right: 4px;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	background: #eff1f1;
+	color: $black;
+	line-height: 150%;
+	border-radius: 50%;
+	border: 2.4px solid #ffffff;
 }
 .header__message {
 }
 .header__quantity-message {
+	background: #ff5449;
+	color: white;
 }
 .header__cart {
 }
@@ -63,7 +90,34 @@
 }
 .header__avatart {
 	display: flex;
-	margin-left: 24px;
+	margin-left: 14px;
 }
 .header__avatar-img {
+	margin-right: 8px;
+	width: 32px;
+	height: 32px;
+}
+@media (min-width: 1270px) {
+	.header__burger {
+		display: none;
+	}
+}
+@media (max-width: 1270px) {
+	.header__search {
+		display: none;
+	}
+	.header__btn {
+		display: none;
+	}
+	.header__language {
+		display: none;
+	}
+	.header__burger {
+		display: block;
+	}
+}
+@media (max-width: 700px) {
+	.header__features-item {
+		margin-right: 0px;
+	}
 }

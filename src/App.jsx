@@ -1,5 +1,6 @@
 //CSS
 import "./global.scss";
+import "./variabels.scss";
 //Instruments
 import {Route, Routes} from "react-router-dom";
 //Components

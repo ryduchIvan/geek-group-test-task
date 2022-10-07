@@ -15,10 +15,10 @@ function Search() {
 		dispatch(addToSearch(event.target.value));
 	}, 250), [])
 	return(
-		<div className="header__search">
+		<>
 			<input className="header__input" type="text" placeholder="Знайти речі або брнди" defaultValue={search} onChange={onChangeValue}/>
 			<img src={Megnifire} alt="" className="header__megnifire" />
-		</div>
+		</>
 	)//add value from input to store
 }
 

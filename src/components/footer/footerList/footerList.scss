@@ -1,0 +1,15 @@
+@import "variabels.scss";
+.footer__list {
+}
+.footer__list-link {
+	margin-bottom: 12px;
+}
+.footer__list-route {
+	text-decoration: none;
+	color: $black;
+	font-size: 14px;
+	&:hover {
+		text-decoration: underline;
+		color: $lightBlack;
+	}
+}

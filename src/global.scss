@@ -24,13 +24,13 @@
 }
 body {
 	font-family: "Stolzl-regular";
-	overflow-x: hidden;
-	min-width: 708px;
+	min-width: 425px;
 }
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 .header {
 	flex: 0 1 1;
@@ -47,6 +47,12 @@ body {
 	margin: 0px auto;
 	padding-left: 30px;
 	padding-right: 30px;
+}
+@media (max-width: 550px) {
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 .btn {
 	display: block;
