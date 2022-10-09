@@ -29,7 +29,7 @@ function FavoriteItem(props) {
 				</div>
 				</div>
 			</div>
-			<button className="favorite__btn btn" onClick={addToBag}>Add to cart</button>
+			<button className="favorite__btn btn-main" onClick={addToBag}>Add to cart</button>
 		</div>
 	)
 }

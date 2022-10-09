@@ -1,0 +1,16 @@
+@import "variabels.scss";
+
+.main__select {
+	display: flex;
+	max-width: 273px;
+	margin: auto 0px auto auto;
+	align-items: center;
+}
+.main__select-title {
+	color: $silver;
+	font-size: 12px;
+	margin-right: 12px;
+}
+.form-select {
+	background-color: black;
+}

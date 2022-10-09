@@ -23,8 +23,8 @@
 	src: url(./assets/fonts/Stolzl-Regular.woff2);
 }
 body {
-	font-family: "Stolzl-regular";
-	min-width: 425px;
+	font-family: "Stolzl-regular" !important;
+	min-width: 425px !important;
 }
 .wrapper {
 	display: flex;
@@ -42,19 +42,13 @@ body {
 	flex: 0 0 1;
 }
 
-.container {
-	max-width: 1380px;
-	margin: 0px auto;
-	padding-left: 30px;
-	padding-right: 30px;
-}
 @media (max-width: 550px) {
 	.container {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 }
-.btn {
+.btn-main {
 	display: block;
 	position: relative;
 	margin: 10px auto;

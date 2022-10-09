@@ -1,3 +1,5 @@
+//CSS
+import "./goods.scss";
 //Instrumets
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
@@ -10,7 +12,7 @@ import {selectGoods} from "./goods-slice";
 import { filtredGoods } from "./goods-slice";
 import { selectSearch } from "../search/search-slice";
 //Components
-import {GoodsItem} from "./GoodsItem";
+import {GoodsItem} from "./goodsItem/GoodsItem";
 import {Sidebar} from "../sidebar/Sidebar";
 import { Search } from "../search/Search.jsx";
 import { PaginationNumber } from "./PaginationsNumber";
@@ -27,9 +29,9 @@ function GoodsList() {
 	// the first parameter is the goods,
 	// the second category of goods
 	// the third is search from input
-	useEffect(()=>{//get a list of products
-		dispatch(loadGoods());
-	}, [numberOfPage, dispatch]);
+	useEffect(() =>{
+		dispatch(loadGoods())
+	},[numberOfPage, category])
 	 //Functions for handle grid`s format 
 	//Pagination
 	const lastGoodsIndex = numberOfPage * amountGoodsOnPage;
@@ -43,39 +45,56 @@ function GoodsList() {
 		setGridFormat(2);
 	}
 	return(
-		<main className="main">
-			<div className="main__container container">
-			<Search/>
-			<div className="main__grid">
-				<div className="main__grid_item" onClick={setTwoWayOfGrid} >
-					<div className="grid__two__item"></div>
-					<div className="grid__two__item"></div>
-				</div>
-				<div className="grid__four main__grid_item" onClick={setFourWayOfGrid}>
-					<div className="main__four__item"></div>
-					<div className="main__four__item"></div>
-					<div className="main__four__item"></div>
-					<div className="main__four__item"></div>
-				</div>
-			</div>
-			<div className="main__row">
-				<Sidebar/>
-				<div className="main__catalog">
+		<div className="goods__box">
+			<div className="row goods__list">
 				{
 					status === "loading" && <Preload/>
 				}
 				{
-					status === "rejected" && <h1>{error}</h1>
+					status === "rejected" && <p className="error">{error}</p>	
 				}
 				{
 					status === "fuilfilled" && paginationGoods.map((good) => <GoodsItem key={good.id} {...good} gridFormat={gridFormat} />)
 				}
-				</div>
+				
 			</div>
-			<PaginationNumber amountGoodsOnPage={amountGoodsOnPage} totalAmountGoods = {filteredList.length} category={category} />
-			</div>
-		</main>
+		</div>
 	)
 }
 
 export {GoodsList};
+
+
+
+//<main className="main">
+//			<div className="main__container container">
+//			<Search/>
+//			<div className="main__grid">
+//				<div className="main__grid_item" onClick={setTwoWayOfGrid} >
+//					<div className="grid__two__item"></div>
+//					<div className="grid__two__item"></div>
+//				</div>
+//				<div className="grid__four main__grid_item" onClick={setFourWayOfGrid}>
+//					<div className="main__four__item"></div>
+//					<div className="main__four__item"></div>
+//					<div className="main__four__item"></div>
+//					<div className="main__four__item"></div>
+//				</div>
+//			</div>
+//			<div className="main__row">
+//				<Sidebar/>
+//				<div className="main__catalog">
+//				{
+//					status === "loading" && <Preload/>
+//				}
+//				{
+//					status === "rejected" && <h1>{error}</h1>
+//				}
+//				{
+//					status === "fuilfilled" && paginationGoods.map((good) => <GoodsItem key={good.id} {...good} gridFormat={gridFormat} />)
+//				}
+//				</div>
+//			</div>
+//			<PaginationNumber amountGoodsOnPage={amountGoodsOnPage} totalAmountGoods = {filteredList.length} category={category} />
+//			</div>
+//		</main>

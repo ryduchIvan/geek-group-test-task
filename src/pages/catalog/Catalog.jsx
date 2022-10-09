@@ -1,8 +1,7 @@
-import {GoodsList} from "../../features/goods/GoodsList";
+import { MainIndex } from "components/main/MainIndex";
 function Catalog(params) {
 	return (
-	//<GoodsList/>
-	<p></p>
+		<MainIndex/>
 	)
 }
 

@@ -1,0 +1,27 @@
+.main {
+	border-top: 1.6px solid #e0e3e3;
+}
+.main__container {
+}
+.contaier {
+}
+.main__breadcrumbs {
+	margin-top: 32px;
+}
+.main__title {
+	margin-top: 40px;
+	font-size: 28px;
+}
+.main__content {
+	display: flex;
+	justify-content: space-between;
+}
+.main__goods {
+	width: 100%;
+	margin-top: 24px;
+}
+@media (max-width: 992px) {
+	.main__sidebar {
+		display: none;
+	}
+}
