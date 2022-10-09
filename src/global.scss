@@ -1,3 +1,4 @@
+@import "variabels.scss";
 @font-face {
 	font-family: "Josefin-l";
 	src: url(./assets/fonts/JosefinSans-Light.ttf);
@@ -41,7 +42,30 @@ body {
 .footer {
 	flex: 0 0 1;
 }
-
+.label {
+	display: block;
+	margin-bottom: 12px;
+	margin-left: 2em;
+	font-size: 14px;
+	font-family: "Stolzl-book";
+	color: $lightBlack;
+	cursor: pointer;
+}
+.checkbox {
+	position: absolute;
+	appearance: none;
+}
+.custom-checkbox {
+	position: absolute;
+	width: 20px;
+	margin-left: -2em;
+	height: 20px;
+	background: url(./assets/icons/active-cb.svg) no-repeat;
+}
+/* Checked*/
+.checkbox:checked + .custom-checkbox {
+	background: url(./assets/icons/checked-cb.svg) no-repeat;
+}
 @media (max-width: 550px) {
 	.container {
 		padding-left: 10px;

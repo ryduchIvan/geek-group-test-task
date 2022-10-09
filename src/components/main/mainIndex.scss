@@ -13,15 +13,18 @@
 	font-size: 28px;
 }
 .main__content {
-	display: flex;
-	justify-content: space-between;
+	border: 3px solid black;
+}
+.main__sidebar {
+	border: 3px solid red;
 }
 .main__goods {
+	border: 3px solid green;
 	width: 100%;
 	margin-top: 24px;
 }
 @media (max-width: 992px) {
 	.main__sidebar {
-		display: none;
+		margin: 0px auto;
 	}
 }

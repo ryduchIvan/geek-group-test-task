@@ -16,9 +16,11 @@ export const MainIndex = () =>{
 				<div className="main__title">
 					Каталог одягу
 				</div>
-				<div className="main__content">
+				<div className="row main__content ">
+					<aside className="col-10 col-lg-3 main__sidebar">
 						<Sidebar/>
-					<div className="ms-0 ms-lg-4 main__goods">
+					</aside>
+					<div className="col-12 col-lg-9 mt-4 mt-lg-0 main__goods">
 						<Select/>
 						<GoodsList/>
 					</div>
