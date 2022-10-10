@@ -33,15 +33,13 @@ const rootReducer = combineReducers({
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
-	reducer: persistedReducer,
+	reducer: rootReducer,
 	devTools: true,
 	middleware: (getDefaultMiddlawar) =>
 	 getDefaultMiddlawar({
 		thunk: {
 			extraArgument: axios 
 		},
-		serializableCheck: {
-			ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-		  },
+		serializableCheck: false
 	})
 })

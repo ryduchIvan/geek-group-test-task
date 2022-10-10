@@ -48,6 +48,10 @@ export const goodsReducer = goodsSlice.reducer;
 export const {setCurrentGoods} = goodsSlice.actions;
 //Select
 export const selectGoods = store => store.goods;
-export const filtredGoods = (goods, filter = "", search) =>{
-	return goods.filter(goods => goods.category.slice(0,2).includes(filter.slice(0,2)) && goods.title.toLowerCase().includes(search.toLowerCase()));
+export const filtredGoods = (goods, filter = "", search, firstPrice, secondPrice) =>{
+	return goods.filter(good => 
+		good.category.slice(0,2).includes(filter.slice(0,2))&& 
+		good.title.toLowerCase().includes(search.toLowerCase())&&
+		good.price > firstPrice && good.price < secondPrice
+		);
 }

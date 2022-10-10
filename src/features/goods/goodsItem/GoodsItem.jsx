@@ -17,7 +17,7 @@ function GoodsItem(props) {
 	const [isPopup, setIsPopup] = useState(false);
 	const {id, title, price, description, image, category, gridFormat} = props;
 	const dispatch = useDispatch();
-	const correctTitle = title.slice(0, 30);
+	const correctTitle = title.slice(0, 20);
 	const oldPrice = Math.round( price * 1.25);
 	const infoAboutItem ={
 		id,
@@ -39,7 +39,6 @@ function GoodsItem(props) {
 	const addToFavoriteItem = () =>{
 		dispatch(addToFavorite(infoAboutItem))
 	}
-	console.log(id);
 	return (
 		<div className="col-12 col-sm-6 col-xl-4 goods__item">
 			 <Card>

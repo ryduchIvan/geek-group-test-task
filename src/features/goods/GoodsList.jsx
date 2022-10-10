@@ -5,6 +5,8 @@ import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useParams} from "react-router-dom";
 import {Link} from "react-router-dom";
+//Icons
+import Preload from "../../assets/icons/preload.svg";
 //Actions
 import {loadGoods} from "./goods-slice";
 //Select
@@ -16,7 +18,6 @@ import {GoodsItem} from "./goodsItem/GoodsItem";
 import {Sidebar} from "../sidebar/Sidebar";
 import { Search } from "../search/Search.jsx";
 import { PaginationNumber } from "./PaginationsNumber";
-import { Preload } from "../../components/Preload/Preload";
 function GoodsList() {
 	//const [grid , setGrid] = useState(4);
 	const [amountGoodsOnPage, setAmountGoodsOnPage] = useState(8);
@@ -24,11 +25,11 @@ function GoodsList() {
 	const {category, numberOfPage = 1} = useParams();//get url
 	const dispatch = useDispatch();
 	const {status, list, error} = useSelector(selectGoods);//get goods object
-	const search = useSelector(selectSearch)//get search from store
-	const filteredList = filtredGoods(list, category, search);//create a filtered list,
-	// the first parameter is the goods,
-	// the second category of goods
-	// the third is search from input
+	const {name, price} = useSelector(selectSearch)//get search from store
+	const filteredList = filtredGoods(list, category,name, price.firstPirce, price.secondPrice);//create a filtered list,
+	//// the first parameter is the goods,
+	//// the second category of goods
+	//// the third is search from input
 	useEffect(() =>{
 		dispatch(loadGoods())
 	},[numberOfPage, category])
@@ -48,7 +49,7 @@ function GoodsList() {
 		<div className="goods__box">
 			<div className="row goods__list">
 				{
-					status === "loading" && <Preload/>
+					status === "loading" && <img src={Preload} alt="preload" className="goods__preload" />
 				}
 				{
 					status === "rejected" && <p className="error">{error}</p>	

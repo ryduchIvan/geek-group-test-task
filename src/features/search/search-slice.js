@@ -1,12 +1,24 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+const initialState = {
+	name: "",
+	price: {
+		firstPirce: 0,
+		secondPrice: 1000
+	}
+}
+
 const searchSlice = createSlice({
 	name: "@@search",
-	initialState: "",
+	initialState,
 	reducers: {
-		addToSearch: (state, action) =>{
-			state = action.payload;
+		setName: (state, action) =>{
+			state.name = action.payload;
 			return state;
+		},
+		setPrice: (state, action) =>{
+			state.price.firstPirce = +action.payload[0];
+			state.price.secondPrice = +action.payload[1];
 		}
 	}
 })
@@ -14,6 +26,6 @@ const searchSlice = createSlice({
 //Reducer 
 export const searchReducer = searchSlice.reducer;
 //Actions
-export const {addToSearchs} = searchSlice.actions;
+export const {setName , setPrice} = searchSlice.actions;
 //Select
 export const selectSearch = store => store.search;
