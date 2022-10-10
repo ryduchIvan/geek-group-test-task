@@ -11,19 +11,39 @@ function Sidebar() {
 		<div className="sidebar__title">
 				Фільтри
 			</div>
-			<div className="mt-4 sidebar__filter">
-				<FilterCategory/>
-				<FilterPrice/>
-				<NoActiveFilter name="Продавець"/>
-				<NoActiveFilter name="Бренд"/>
-				<FilterGender/>
-				<NoActiveFilter name="Розмір"/>
-				<NoActiveFilter name="Колір"/>
-				<NoActiveFilter name="Матеріал"/>
-				<NoActiveFilter name="Сезон"/>
-				<NoActiveFilter name="Стиль"/>
+			<div className="row mt-4 sidebar__filter-list">
+				<div className="col-6 col-md-4 col-lg-12 sidebar__filter-item">
+					<FilterCategory/>
+				</div>
+				<div className="col-6 col-md-4 col-lg-12 sidebar__filter-item">
+					<FilterPrice/>
+				</div>
+				<div className="col-6 col-md-4 col-lg-12 sidebar__filter-item">
+					<NoActiveFilter name="Продавець"/>
+				</div>
+				<div className="col-6 col-md-4 col-lg-12 sidebar__filter-item">
+					<NoActiveFilter name="Бренд"/>
+				</div>
+				<div className="col-6 col-md-4 col-lg-12 sidebar__filter-item">
+					<FilterGender/>
+				</div>
+				<div className="col-6 col-md-4 col-lg-12 sidebar__filter-item">
+					<NoActiveFilter name="Розмір"/>
+				</div>
+				<div className="col-6 col-md-4 col-lg-12 sidebar__filter-item">
+					<NoActiveFilter name="Колір"/>
+				</div>
+				<div className="col-6 col-md-4 col-lg-12 sidebar__filter-item">
+					<NoActiveFilter name="Матеріал"/>
+				</div>
+				<div className="col-6 col-md-4 col-lg-12 sidebarr__filter-item">
+					<NoActiveFilter name="Сезон"/>
+				</div>
+				<div className="col-6 col-md-4 col-lg-12 sidebar__fitler-item">
+					<NoActiveFilter name="Стиль"/>
+				</div>
 			</div>
-			</>
+		</>
 	)
 }
 

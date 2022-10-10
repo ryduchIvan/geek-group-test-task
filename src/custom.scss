@@ -29,3 +29,16 @@
 	color: $lightBlack;
 	font-family: "Stolzl-book";
 }
+.pagination {
+	--bs-pagination-padding-x: 1rem;
+	--bs-pagination-padding-y: 1rem;
+	--bs-pagination-color: $silver;
+	--bs-pagination-border-width: 1.6px;
+	--bs-pagination-border-color: $silver;
+	--bs-pagination-bg: none;
+	--bs-pagination-active-color: $silver;
+	--bs-pagination-active-bg: none;
+	--bs-pagination-font-size: 10px;
+	--bs-pagination-hover-color: none;
+	--bs-pagination-hover-bg: none;
+}

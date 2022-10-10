@@ -29,7 +29,7 @@ const goodsSlice = createSlice({
 			const goods = state.list;
 			for(let n =0; n < goods.length; n++){
 				for(let i =0; i < goods.length - 1 -n; i++){
-					if (Math.round(goods[i].price) > Math.round(goods[i + 1].price)) {
+					if (Math.round(+goods[i].price) > Math.round(+goods[i + 1].price)) {
 						let temp = goods[i];
 						goods[i] = goods[i + 1];
 						goods[i + 1] = temp
@@ -41,7 +41,7 @@ const goodsSlice = createSlice({
 			const goods = state.list;
 			for(let n =0; n < goods.length; n++){
 				for(let i =0; i < goods.length - 1 -n; i++){
-					if ( Math.round(goods[i].price) < Math.round(goods[i + 1].price)) {
+					if (Math.round(+goods[i].price) < Math.round(+goods[i + 1].price)) {
 						let temp = goods[i];
 						goods[i] = goods[i + 1];
 						goods[i + 1] = temp

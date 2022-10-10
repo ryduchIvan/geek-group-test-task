@@ -9,7 +9,7 @@ function Footer() {
 	const footerSecondList = ["Довідка для продавців", "Як почати продавати" ,"Тарифи" , "Угода користувача" , "Політика конфіденційності", "Правила користвуання порталом", "Бонусна програма"];
 	const footerThirdList = ["Про нас","Довідка та FAQ", "Захист легальност контенту", "Адміністрація", "Вакансії"];
  	return(
-	<footer class="footer">
+	<footer class="footer" >
 		<div class="footer__container container">
 			<div class="footer__content">
 				<div class="footer__row">

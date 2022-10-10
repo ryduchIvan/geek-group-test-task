@@ -44,7 +44,8 @@ function GoodsList() {
 		setGridFormat(2);
 	}
 	return(
-		<div className="goods__box">
+		<>
+		<div className="goods__box" id="goods-box">
 			<div className="row goods__list">
 				{
 					status === "loading" && <img src={Preload} alt="preload" className="goods__preload" />
@@ -57,8 +58,11 @@ function GoodsList() {
 				}
 				
 			</div>
-				<PaginationComponent category={category} amountGoodsOnPage={amountGoodsOnPage} totalAmountGoods={list.length}/>
 		</div>
+		{
+			status === "fuilfilled" && <PaginationComponent category={category} amountGoodsOnPage={amountGoodsOnPage} totalAmountGoods={filteredList.length}/>
+		}
+		</>
 	)
 }
 

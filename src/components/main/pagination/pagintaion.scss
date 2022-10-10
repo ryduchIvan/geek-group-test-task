@@ -1,4 +1,43 @@
+@import "variabels.scss";
+.main__pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 59px;
+}
 .main__pagination-number {
-	color: black;
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+	margin-left: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 34px;
+	height: 34px;
+	font-size: 10px;
+	border: 1.6px solid #c4c7c7;
+	border-radius: 50%;
+	color: $black;
 	text-decoration: none;
+	&.active {
+		border: 1.6px solid $black;
+	}
+	&:first-child {
+		margin-left: 0px;
+	}
+}
+.main__pagination-button {
+	width: 99px;
+	height: 32px;
+	border: 1.6px solid #c4c7c7;
+	border-radius: 100px;
+	font-size: 12px;
+	color: $silver;
+	background-color: white;
+	&:first-child {
+		margin-right: 8px;
+	}
+	&:last-child {
+		margin-left: 8px;
+	}
 }
