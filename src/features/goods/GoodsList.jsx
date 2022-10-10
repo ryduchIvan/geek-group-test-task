@@ -15,9 +15,7 @@ import { filtredGoods } from "./goods-slice";
 import { selectSearch } from "../search/search-slice";
 //Components
 import {GoodsItem} from "./goodsItem/GoodsItem";
-import {Sidebar} from "../sidebar/Sidebar";
-import { Search } from "../search/Search.jsx";
-import { PaginationNumber } from "./PaginationsNumber";
+import {PaginationComponent} from "../../components/main/pagination/PaginationComponent";
 function GoodsList() {
 	//const [grid , setGrid] = useState(4);
 	const [amountGoodsOnPage, setAmountGoodsOnPage] = useState(9);
@@ -59,6 +57,7 @@ function GoodsList() {
 				}
 				
 			</div>
+				<PaginationComponent category={category} amountGoodsOnPage={amountGoodsOnPage} totalAmountGoods={list.length}/>
 		</div>
 	)
 }
