@@ -20,7 +20,7 @@ import { Search } from "../search/Search.jsx";
 import { PaginationNumber } from "./PaginationsNumber";
 function GoodsList() {
 	//const [grid , setGrid] = useState(4);
-	const [amountGoodsOnPage, setAmountGoodsOnPage] = useState(8);
+	const [amountGoodsOnPage, setAmountGoodsOnPage] = useState(9);
 	const [gridFormat, setGridFormat] = useState(4);
 	const {category, numberOfPage = 1} = useParams();//get url
 	const dispatch = useDispatch();
@@ -67,35 +67,3 @@ export {GoodsList};
 
 
 
-//<main className="main">
-//			<div className="main__container container">
-//			<Search/>
-//			<div className="main__grid">
-//				<div className="main__grid_item" onClick={setTwoWayOfGrid} >
-//					<div className="grid__two__item"></div>
-//					<div className="grid__two__item"></div>
-//				</div>
-//				<div className="grid__four main__grid_item" onClick={setFourWayOfGrid}>
-//					<div className="main__four__item"></div>
-//					<div className="main__four__item"></div>
-//					<div className="main__four__item"></div>
-//					<div className="main__four__item"></div>
-//				</div>
-//			</div>
-//			<div className="main__row">
-//				<Sidebar/>
-//				<div className="main__catalog">
-//				{
-//					status === "loading" && <Preload/>
-//				}
-//				{
-//					status === "rejected" && <h1>{error}</h1>
-//				}
-//				{
-//					status === "fuilfilled" && paginationGoods.map((good) => <GoodsItem key={good.id} {...good} gridFormat={gridFormat} />)
-//				}
-//				</div>
-//			</div>
-//			<PaginationNumber amountGoodsOnPage={amountGoodsOnPage} totalAmountGoods = {filteredList.length} category={category} />
-//			</div>
-//		</main>
