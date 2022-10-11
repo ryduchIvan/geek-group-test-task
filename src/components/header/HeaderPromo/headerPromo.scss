@@ -1,17 +1,16 @@
 .header__promo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	height: 44px;
 	background: #cbdcff;
 }
-.header__promo-images {
+.header__promo-content {
 	display: flex;
-}
-.header__promo-image {
-	object-fit: cover;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 .header__promo-title {
+	font-size: 16px;
+	line-height: 150%;
 	color: #0f1a34;
 	margin-left: 10px;
 }

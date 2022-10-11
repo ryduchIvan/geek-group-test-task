@@ -1,42 +1,39 @@
-//IMG
-import HeaderLogo from "assets/img/header-logo.svg";
-import Heart from "assets/icons/heart.svg";
-import Message from "assets/icons/message.svg";
-import Cart from "assets/icons/cart.svg";
-import LanguageArrow from "assets/icons/language-arrow.svg";
-import Avatar from "assets/img/avatar.png";
 //CSS
 import "./headerMain.scss";
-//Components
-import { Search } from "features/search/Search.jsx";
-import { FavoriteList } from "features/favorite/FavoriteList";
-import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
-//Selectors
-import { selectCart } from "features/cart/cart-slice";
-import { selectFavorite } from "features/favorite/favorite-slice";
 //Hooks
 import {useSelector} from "react-redux";
 import { useState } from "react";
+//selector
+import { selectFavorite } from "features/favorite/favorite-slice";
+import { selectCart } from "features/cart/cart-slice";
+//Icons
+import Heart from "assets/icons/heart.svg";
+import Cart from "assets/icons/cart.svg";
+import Avatar from "assets/img/avatar.png";
+import Message from "assets/icons/message.svg";
+import Arrow from "assets/icons/arrow.svg";
+import HeaderLogo from "assets/img/header-logo.svg";
+import {Form} from "react-bootstrap";
+import { Search } from "features/search/Search";
+//Components
 import { CartList } from "features/cart/CartList";
-import { Burger } from "../BurgerMenu/Burger";
+import { FavoriteList } from "features/favorite/FavoriteList";
+import { BurgerMenu } from "../burgerMenu/BurgerMenu";
+import { Burger } from "../burger/Burger";
 export const HeaderMain = () =>{
 	const [isCart, setCart] = useState(false);
 	const [isFavorite, setFavorite] = useState(false);
 	const [isBurgerMenu, setBurgerMenu] = useState(false);
-	const {items} = useSelector(selectCart);//got a list of products in the cart
 	const favorite = useSelector(selectFavorite);
-	const toggleState = (state, setState) =>{
-		if (state) {
-			setState(false)
-		} else {
-			setState(true)
-		}
+	const {items} = useSelector(selectCart);
+	const toggle = (state, setState) =>{
+		setState(!state);
 	}
 	const closeCart = () =>{
-		setCart(false)
+		setCart(false);
 	}
 	const closeFavorite = () =>{
-		setFavorite(false)
+		setFavorite(false);
 	}
 	const openBurgerMenu = () =>{
 		setBurgerMenu(true);
@@ -45,52 +42,47 @@ export const HeaderMain = () =>{
 		setBurgerMenu(false);
 	}
 	return (
-		<section className="header__main">
-			<div className="header__row">
-				<div className="header__logo">
-					<img src={HeaderLogo} alt="header-logo" />
+		<nav className="header__main">
+			<div className="header__logo">
+				<img src={HeaderLogo} alt="header__logo" />
+			</div>
+			<div className="d-none d-xl-block header__search">
+				<Search/>
+			</div>
+			<button className="d-none d-xl-flex header__btn">Додати товар</button>
+			<Form.Select className="d-none d-xl-block header__select">
+      			<option value="1">Укр</option>
+      			<option value="2">Пол</option>
+     			<option value="3">Англ</option>
+    		</Form.Select>
+			<div className="header__features">
+				<div className="header__features-item" onClick={() =>{
+						toggle(isFavorite, setFavorite);
+				}}> 
+					<img src={Heart} alt="" className="header__features-img"  />
+					<span className="quintity">{favorite.length}</span>
 				</div>
-				<div className="header__search">
-					<Search/>
+				<div className="header__features-item">
+					<img src={Message} alt="" className="header__features-img" />
+					<span className="quintity orange">0</span>
 				</div>
-				<button className="header__btn">Додати товар</button>
-				<div className="header__language">
-					<span className="header__language-text">
-						Укр
-					</span>
-					<img src={LanguageArrow} alt="arrow" className="header__language-arrow"></img>
+				<div className="header__features-item"onClick={() =>{
+					toggle(isCart, setCart);
+				}}>
+					<img src={Cart} alt="" className="header__features-img" />
+					<span className="quintity">{items.length}</span>
 				</div>
-				<div className="header__features">
-					<div className="header__heart header__features-item" onClick={() =>{toggleState(isFavorite, setFavorite)}}>
-						<img src={Heart} alt="heart" className="header__heart-img header__icon" />
-						<span className="header__quantity-heart quantity">
-							{favorite.length}
-						</span>
-					</div>
-					<div className="header__message header__features-item">
-						<img src={Message} alt="heart" className="header__message-img header__icon" />
-						<span className="header__quantity-message quantity">
-							0
-						</span>
-					</div>
-					<div className="header__cart header__features-item" onClick={() =>{toggleState(isCart, setCart)}}>
-						<img src={Cart} alt="heart" className="header__cart-img header__icon" />
-						<span className="header__quantity-cart quantity">
-							{items.length}
-						</span>
-					</div>
-					<div className="header__avatart header__features-item">
-						<img src={Avatar} alt="avatar" className="header__avatar-img header__icon" />
-						<img src={LanguageArrow} alt="arrow" className="header__avatar-arrow" />
-					</div>
-					<div className="header__burger header__features-item">
-						<Burger openBurgerMenu={openBurgerMenu}/>
-					</div>
+				<div className="header__features-item header__features-avatar">
+					<img src={Avatar} alt="" className="header__features-img" />
+					<img src={Arrow} alt="arrow" />
+				</div>
+				<div className="d-block d-xl-none header__burger header__features-item">
+					<Burger openBurgerMenu={openBurgerMenu}/>
 				</div>
 			</div>
 			<BurgerMenu status={isBurgerMenu} closeBurgerMenu={closeBurgerMenu}/>
-			<FavoriteList status={isFavorite} closeFavorite={closeFavorite} favorite={favorite}/>
-			<CartList status={isCart} closeCart={closeCart} items={items}/>
-		</section>
+			<CartList status={isCart} items={items} closeCart={closeCart} />
+			<FavoriteList status={isFavorite} items={favorite} closeFavorite={closeFavorite} />
+		</nav>
 	)
 }

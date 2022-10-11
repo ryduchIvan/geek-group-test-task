@@ -1,5 +1,4 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {useDispatch} from "react-redux";
 export const loadGoods = createAsyncThunk(
 	"@@goods/load-goods",
 	async(_, {rejectWithValue, extra: axios}) =>{
@@ -20,12 +19,12 @@ const initialState = {
 
 const goodsSlice = createSlice({
 	name: "@@goods",
-	initialState: initialState,
+	initialState,
 	reducers: {
 		setCurrentGoods: (state, action) =>{
 			state.currentGoods = action.payload;
 		},
-		filteringByAscendingPrices: (state,action)=>{
+		filteringByAscendingPrices: (state)=>{
 			const goods = state.list;
 			for(let n =0; n < goods.length; n++){
 				for(let i =0; i < goods.length - 1 -n; i++){
@@ -37,7 +36,7 @@ const goodsSlice = createSlice({
 				}
 			}
 		},
-		filteringByDecreasingPrices: (state, action) =>{
+		filteringByDecreasingPrices: (state) =>{
 			const goods = state.list;
 			for(let n =0; n < goods.length; n++){
 				for(let i =0; i < goods.length - 1 -n; i++){
@@ -69,7 +68,7 @@ const goodsSlice = createSlice({
 //Reducer
 export const goodsReducer = goodsSlice.reducer;
 //Actions
-export const {setCurrentGoods, filteringByAscendingPrices, filteringByDecreasingPrices} = goodsSlice.actions;
+export const {setCurrentGoods, filteringByAscendingPrices, filteringByDecreasingPrices ,filteringByDefault} = goodsSlice.actions;
 //Select]
 
 

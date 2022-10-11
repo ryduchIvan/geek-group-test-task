@@ -19,8 +19,8 @@ export const Select = () =>{
 			<div className="main__select-title">
 				Сортувати за: 
 			</div>
-			<Form.Select onChange={(event) => setFilterMethod(event.target.value)} aria-label="Default select example">
-				<option>За новизною</option>
+			<Form.Select onChange={(event) => setFilterMethod(event.target.value)} aria-label="Default select example" className="main__select-form">
+				<option value="default">За новизною</option>
 				<option value="priceUp">Від дешевих к дорогим</option>
 				<option value="priceDown">Від дорогих к дешевим</option>
 	 		</Form.Select>

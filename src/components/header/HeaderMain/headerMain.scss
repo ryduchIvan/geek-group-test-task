@@ -1,123 +1,69 @@
-@import "variabels.scss";
-.container {
-}
 .header__main {
-	margin-top: 20px;
-	position: relative;
-}
-.header__row {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
+	align-items: center;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	border-bottom: 1.6px solid #e0e3e3;
+	position: relative;
 }
 .header__logo {
 }
 .header__search {
-	max-width: 639px;
+	width: 639px;
+	height: 40px;
 }
 .header__btn {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	color: white;
+	font-size: 12px;
 	width: 129px;
 	height: 38px;
-	font-size: 12px;
-	line-height: 18px;
-	border: none;
-	background: $black;
+	background: #2d3132;
 	border-radius: 4px;
-	color: white;
-}
-.header__language {
-	display: flex;
-}
-.header__language-text {
-	font-size: 12px;
-	line-height: 150%;
-	margin-right: 4px;
-}
-.header__language-arrow {
 }
 .header__features {
 	display: flex;
 	align-items: center;
 }
 .header__features-item {
+	cursor: pointer;
+	margin-left: 24px;
 	position: relative;
-	width: 44px;
-	height: 44px;
+	&:first-child {
+		margin-left: 0px;
+	}
+}
+
+.quintity {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-right: 10px;
-	cursor: pointer;
-}
-.header__icon {
-	width: 20.5px;
-}
-.header__heart {
-}
-.header__heart-img {
-}
-.header__quantity-heart {
-}
-.quantity {
 	position: absolute;
-	top: 4px;
-	right: 4px;
+	top: -8px;
+	left: 13px;
+	font-size: 10px;
 	width: 18px;
 	height: 18px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 10px;
-	background: #eff1f1;
-	color: $black;
-	line-height: 150%;
 	border-radius: 50%;
+	background-color: #eff1f1;
 	border: 2.4px solid #ffffff;
 }
-.header__message {
-}
-.header__quantity-message {
-	background: #ff5449;
+.orange {
+	background-color: #ff5449;
 	color: white;
 }
-.header__cart {
-}
-.header__quantity-cart {
-}
-.header__avatart {
+.header__features-avatar {
 	display: flex;
-	margin-left: 14px;
-}
-.header__avatar-img {
-	margin-right: 8px;
-	width: 32px;
-	height: 32px;
-}
-@media (min-width: 1270px) {
-	.header__burger {
-		display: none;
+	img {
+		margin-right: 8px;
 	}
 }
-@media (max-width: 1270px) {
-	.header__search {
-		display: none;
-	}
-	.header__btn {
-		display: none;
-	}
-	.header__language {
-		display: none;
-	}
-	.header__burger {
-		display: block;
-	}
-}
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.header__features-item {
-		margin-right: 0px;
+		margin-left: 16px;
 	}
 }

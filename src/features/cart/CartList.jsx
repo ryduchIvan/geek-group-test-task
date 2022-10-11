@@ -4,8 +4,7 @@ import "./cart.scss";
 //Components
 import {CartItem} from "./CartItem";
 //Select
-function CartList(props) {
-	const {status, items, closeCart} = props;
+function CartList({status, items, closeCart}) {
 
 	const createTotalPrice = () =>{
 		let totalPrice = 0;

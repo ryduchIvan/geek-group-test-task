@@ -8,7 +8,7 @@ import {useParams} from "react-router-dom";
 import Preload from "../../assets/icons/preload.svg";
 //Actions
 import {loadGoods} from "./goods-slice";
-import {filteringByAscendingPrices, filteringByDecreasingPrices} from "./goods-slice";
+import {filteringByAscendingPrices, filteringByDecreasingPrices, filteringByDefault} from "./goods-slice";
 //Select
 import {selectGoods} from "./goods-slice";
 import { filtredGoods } from "./goods-slice";
@@ -66,11 +66,15 @@ function GoodsList() {
 				{
 					status === "fuilfilled" && paginationGoods.map((good) => <GoodsItem key={good.id} {...good} gridFormat={gridFormat} />)
 				}
-				
+				{
+					status === "fuilfilled" && paginationGoods.length < 1 && <h2>Товару не знайдено</h2>
+				}
 			</div>
 		</div>
 		{
-			status === "fuilfilled" && <PaginationComponent category={category} amountGoodsOnPage={amountGoodsOnPage} totalAmountGoods={filteredList.length}/>
+			status === "fuilfilled"&&
+			paginationGoods.length >= 1 &&
+			<PaginationComponent category={category} amountGoodsOnPage={amountGoodsOnPage} totalAmountGoods={filteredList.length}/>
 		}
 		</>
 	)

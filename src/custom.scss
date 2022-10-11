@@ -1,10 +1,21 @@
 @import "variabels.scss";
-.form-select {
-	width: 170px;
+.navbar {
+	--bs-navbar-padding-y: none;
+}
+.navbar-nav {
+	--bs-nav-link-padding-y: none;
+}
+.header__select {
+	border: none;
+	width: 85px;
+	font-size: 12px;
+}
+.main__select-form {
 	height: 34px;
-	//background: #eff1f1;
+	background-color: #eff1f1;
 	font-size: 12px;
 	border-radius: 100px;
+	max-width: 200px;
 }
 .card {
 	border: 1px solid #eff1f1;
@@ -16,6 +27,8 @@
 }
 .accordion {
 	--bs-accordion-bg: #eff1f1;
+	--bs-accordion-active-bg: #eff1f1;
+	--bs-accordion-active-color: $lightBlack;
 }
 .accordion-item {
 	background-color: white;
@@ -35,7 +48,6 @@
 	--bs-pagination-color: $silver;
 	--bs-pagination-border-width: 1.6px;
 	--bs-pagination-border-color: $silver;
-	--bs-pagination-bg: none;
 	--bs-pagination-active-color: $silver;
 	--bs-pagination-active-bg: none;
 	--bs-pagination-font-size: 10px;

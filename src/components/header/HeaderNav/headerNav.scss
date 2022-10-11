@@ -1,32 +1,33 @@
-@import "./variabels.scss";
-.header__nav {
-	margin-top: 20px;
-	height: 52px;
-	border-top: 1.6px solid #e0e3e3;
-}
-.header__list {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 868px;
-	height: 100%;
-}
-.header__link {
+@import "variabels.scss";
+
+.nav-link {
+	padding: 0px;
 }
 .header__link-route {
-	font-family: "Stolzl-medium";
+	display: block;
+	height: 100%;
 	text-decoration: none;
 	color: $black;
 	font-size: 13px;
-	font-weight: 500;
+	font-family: "Stolzl-medium";
 	text-transform: uppercase;
-	&:hover {
-		color: $lightBlack;
-		text-decoration: underline;
-	}
-}
-@media (max-width: 1270px) {
-	.header__nav {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	margin-right: 12px;
+	position: relative;
+	&::before {
+		content: "";
+		width: 100%;
+		height: 3px;
+		background-color: black;
 		display: none;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+	}
+	&:hover {
+		&::before {
+			display: block;
+		}
 	}
 }

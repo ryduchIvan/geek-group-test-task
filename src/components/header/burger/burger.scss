@@ -2,6 +2,8 @@
 .header__burger {
 	border: 1px solid white;
 	position: relative;
+	width: 40px;
+	height: 40px;
 	&::after {
 		content: "";
 		display: block;
@@ -28,7 +30,7 @@
 		height: 3px;
 		background-color: $black;
 		position: absolute;
-		bottom: 19px;
+		bottom: 17px;
 		left: 0px;
 	}
 }

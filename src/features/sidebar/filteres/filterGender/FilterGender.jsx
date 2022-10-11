@@ -12,6 +12,13 @@ export const FilterGender = () => {
 		  <Accordion.Body>
 			<div className="sidebar__gender">
 			<label className="sidebar__category-laber label" onClick={() =>{
+					navigate("/goods");
+				}}>
+					<input type="radio" name="gender" className="sidebar__checkbox checkbox" />
+					<span className="custom-checkbox"></span>
+					Всі
+			</label>
+			<label className="sidebar__category-laber label" onClick={() =>{
 				navigate("/goods/women's clothing")
 			}}>
 					<input type="radio" name="gender" className="sidebar__checkbox checkbox" />

@@ -6,15 +6,10 @@ import {addToCart} from "../cart/cart-slice";
 import Close from "../../assets/img/close-svgrepo-com (1).svg";
 function FavoriteItem(props) {
 	const {item} = props;//accept product information
-	const {image, title, id} = item;
+	const {image, title, id, correctTitle} = item;
 	const dispatch = useDispatch();
 	const addToBag = () =>{
 		dispatch(addToCart(item))
-	}
-	const infoAboutItem ={
-		id,
-		title,
-		image,
 	}
 	return(
 		<div className="favorite__item">
@@ -25,7 +20,7 @@ function FavoriteItem(props) {
 				<img className="favorite__img" src={image} alt="favorite_img"></img>
 				<div className="favorite__info">
 				<div className="favorite__title">
-					{title}
+					{title === correctTitle ? <p>{title}</p> : <p>{correctTitle}...</p>}
 				</div>
 				</div>
 			</div>

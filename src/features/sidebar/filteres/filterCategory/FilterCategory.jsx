@@ -11,6 +11,13 @@ export const FilterCategory = () => {
 		  <Accordion.Header>Категорії</Accordion.Header>
 		  <Accordion.Body>
 			<div className="sidebar__category">
+			<label className="sidebar__category-laber label" onClick={() =>{
+					navigate("/goods");
+				}}>
+					<input type="radio" name="category" className="sidebar__checkbox checkbox" />
+					<span className="custom-checkbox"></span>
+					Всі
+				</label>
 				<label className="sidebar__category-laber label" onClick={() =>{
 					navigate("/goods/women's clothing");
 				}}>

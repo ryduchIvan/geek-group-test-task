@@ -2,8 +2,9 @@
 
 .main__select {
 	display: flex;
-	max-width: 273px;
+	max-width: 320px;
 	margin: auto 0px auto auto;
+	justify-content: flex-end;
 	align-items: center;
 }
 .main__select-title {

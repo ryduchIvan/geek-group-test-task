@@ -1,5 +1,5 @@
 .cart__list {
-	width: 500px;
+	width: 400px;
 	background-color: white;
 	border-radius: 40px;
 	position: absolute;
@@ -29,9 +29,7 @@
 	}
 }
 .cart__title {
-	font-family: "Josefin-m";
 	text-align: center;
-	padding-left: 15px;
 	padding-right: 15px;
 	h1 {
 		border-bottom: 1px solid rgb(142, 142, 142);
@@ -47,7 +45,6 @@
 	width: 300px;
 }
 .cart_empty__title {
-	font-family: "Josefin-sb";
 	font-size: 24px;
 	border-top: 1px solid rgb(142, 142, 142);
 	padding-top: 15px;
@@ -81,21 +78,19 @@
 	display: flex;
 }
 .cart__img {
-	width: 120px;
-	height: 135px;
+	width: 100px;
+	height: 120px;
 }
 .cart__info {
-	margin-left: 15px;
+	margin-left: 10px;
 }
 .cart__title {
-	font-size: 18px;
+	font-size: 16px;
 }
 .cart__price {
-	font-family: "Josefin-sb";
-	margin-top: 10px;
-	font-size: 22px;
+	font-size: 18px;
 	span {
-		font-family: "Josefin-l";
+		font-family: "Stolzl-book";
 	}
 }
 .cart__quintity {
@@ -115,12 +110,9 @@
 	transform: rotate(360deg);
 }
 .cart__total__price {
-	font-size: 24px;
+	font-size: 20px;
 	text-align: center;
 	padding: 10px 0px;
 	background-color: black;
 	color: white;
-	span {
-		font-family: "Josefin-sb";
-	}
 }
