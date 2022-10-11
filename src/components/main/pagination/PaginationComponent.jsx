@@ -23,7 +23,7 @@ export const PaginationComponent = ({amountGoodsOnPage, totalAmountGoods, catego
 	}
  return(
 	<section className="main__pagination">
-		<a href="#main" onClick={() => {
+		<a href="#goods-box" onClick={() => {
 			category ? navigate(`/goods/${category}/path/${+numberOfPage-1}`) : navigate(`/goods/path/${+numberOfPage-1}`);
 		}}>
 			<button className="main__pagination-button" disabled={+numberOfPage === 1}>Попередня</button>
@@ -31,7 +31,7 @@ export const PaginationComponent = ({amountGoodsOnPage, totalAmountGoods, catego
 
     	<Pagination>{pageNumbers}</Pagination>
 
-		<a href="#main" onClick={() => {
+		<a href="#goods-box" onClick={() => {
 			category ? navigate(`/goods/${category}/path/${+numberOfPage+1}`) : navigate(`/goods/path/${+numberOfPage+1}`);
 		}}>
 			<button className="main__pagination-button" disabled ={+numberOfPage === pageNumbers.length}>Наступна</button>

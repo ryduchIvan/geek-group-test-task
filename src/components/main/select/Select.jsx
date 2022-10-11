@@ -1,17 +1,18 @@
 //Hooks
 import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {useParams} from "react-router-dom";
+//Selector
+import { selectSearch } from "features/search/search-slice";
 //Actions
-import {filteringByAscendingPrices, filteringByDecreasingPrices} from "../../../features/goods/goods-slice";
+
+import { setMethod } from "features/search/search-slice";
 import Form from 'react-bootstrap/Form';
 import "./select.scss";
 export const Select = () =>{
 	const dispatch = useDispatch();
 	const setFilterMethod = (value) =>{
-		if (value === "priceUp") {
-			dispatch(filteringByAscendingPrices())
-		} else if (value === "priceDown"){
-			dispatch(filteringByDecreasingPrices())
-		}
+		dispatch(setMethod(value));
 	}
 	return (
 		<div className="main__select">

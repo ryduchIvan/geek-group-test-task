@@ -5,7 +5,8 @@ const initialState = {
 	price: {
 		firstPirce: 0,
 		secondPrice: 1000
-	}
+	},
+	method: ""
 }
 
 const searchSlice = createSlice({
@@ -19,6 +20,9 @@ const searchSlice = createSlice({
 		setPrice: (state, action) =>{
 			state.price.firstPirce = +action.payload[0];
 			state.price.secondPrice = +action.payload[1];
+		},
+		setMethod: (state, action) =>{
+			state.method = action.payload;
 		}
 	}
 })
@@ -26,6 +30,6 @@ const searchSlice = createSlice({
 //Reducer 
 export const searchReducer = searchSlice.reducer;
 //Actions
-export const {setName , setPrice} = searchSlice.actions;
+export const {setName , setPrice, setMethod} = searchSlice.actions;
 //Select
 export const selectSearch = store => store.search;

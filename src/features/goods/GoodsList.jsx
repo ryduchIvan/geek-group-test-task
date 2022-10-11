@@ -4,11 +4,11 @@ import "./goods.scss";
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useParams} from "react-router-dom";
-import {Link} from "react-router-dom";
 //Icons
 import Preload from "../../assets/icons/preload.svg";
 //Actions
 import {loadGoods} from "./goods-slice";
+import {filteringByAscendingPrices, filteringByDecreasingPrices} from "./goods-slice";
 //Select
 import {selectGoods} from "./goods-slice";
 import { filtredGoods } from "./goods-slice";
@@ -23,14 +23,24 @@ function GoodsList() {
 	const {category, numberOfPage = 1} = useParams();//get url
 	const dispatch = useDispatch();
 	const {status, list, error} = useSelector(selectGoods);//get goods object
-	const {name, price} = useSelector(selectSearch)//get search from store
-	const filteredList = filtredGoods(list, category,name, price.firstPirce, price.secondPrice);//create a filtered list,
+	const {name, price , method} = useSelector(selectSearch);//get search from store
+	const filtredGoodsByPrice = (list,method) =>{
+		if(method === "priceUp"){
+			dispatch(filteringByAscendingPrices());
+		}
+		 else if (method === "priceDown") {
+			dispatch(filteringByDecreasingPrices());
+		}
+		return list
+	}
+	//create a filtered list,
 	//// the first parameter is the goods,
 	//// the second category of goods
 	//// the third is search from input
+	let filteredList = filtredGoods(filtredGoodsByPrice(list, method), category,name, price.firstPirce, price.secondPrice);
 	useEffect(() =>{
 		dispatch(loadGoods())
-	},[numberOfPage, category])
+	},[numberOfPage, category, dispatch]);
 	 //Functions for handle grid`s format 
 	//Pagination
 	const lastGoodsIndex = numberOfPage * amountGoodsOnPage;

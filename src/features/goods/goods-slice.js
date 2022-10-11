@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-
+import {useDispatch} from "react-redux";
 export const loadGoods = createAsyncThunk(
 	"@@goods/load-goods",
 	async(_, {rejectWithValue, extra: axios}) =>{
@@ -70,7 +70,9 @@ const goodsSlice = createSlice({
 export const goodsReducer = goodsSlice.reducer;
 //Actions
 export const {setCurrentGoods, filteringByAscendingPrices, filteringByDecreasingPrices} = goodsSlice.actions;
-//Select
+//Select]
+
+
 export const selectGoods = store => store.goods;
 export const filtredGoods = (goods, filter = "", search, firstPrice, secondPrice) =>{
 	return goods.filter(good => 
