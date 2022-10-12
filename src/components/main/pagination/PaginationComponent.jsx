@@ -13,9 +13,9 @@ export const PaginationComponent = ({amountGoodsOnPage, totalAmountGoods, catego
 	for(let number = 1 ; number < totalAmountGoods/amountGoodsOnPage+1; number++){
 		pageNumbers.push(
 				<Pagination.Item as="<a>" href="#goods-box"  className={`main__pagination-number ${+numberOfPage=== number && "active"}`} key={number}
-				onClick={() =>{
+					onClick={() =>{
 					category ? navigate(`/goods/${category}/path/${number}`) : navigate(`/goods/path/${number}`)
-				}}
+					}}
 				>
 					{number}
 				</Pagination.Item>
