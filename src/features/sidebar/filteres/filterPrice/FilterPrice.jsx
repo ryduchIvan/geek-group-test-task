@@ -3,7 +3,7 @@ import "nouislider/distribute/nouislider.css";
 import "./filterPrice.scss";
 //Hooks
 import { useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 //Actions
 import { setPrice } from "features/search/search-slice";
 //Components
@@ -20,10 +20,10 @@ export const FilterPrice = () =>{
 		setSecondPrice(value)
 	};
 	return(
-		 <Accordion defaultActiveKey="0">
-			<Accordion.Item eventKey="0">
+		 <Accordion defaultActiveKey="0" className="sidebar__accordion">
+			<Accordion.Item eventKey="0" className="sidebar__accordion-item">
 	  			<Accordion.Header>Ціна</Accordion.Header>
-	  			<Accordion.Body>	
+	  			<Accordion.Body >	
 	  			<Nouislider range={{ min: 0, max: 1000 }} start={[0, 1000]} connect onUpdate={(event) =>{
 				handleFirstInputValue(Math.round(event[0]));
 				handleSecondInputValue(Math.round(event[1]));}} onSet={(event) =>{dispatch(setPrice(event))}}/>

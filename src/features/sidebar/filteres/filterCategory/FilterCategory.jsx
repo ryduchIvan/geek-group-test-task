@@ -6,8 +6,8 @@ import "./filterCategory.scss";
 export const FilterCategory = () => {
 	const navigate = useNavigate();
 	return (
-		<Accordion defaultActiveKey="0">
-		<Accordion.Item eventKey="0">
+		<Accordion defaultActiveKey="0" className="sidebar__accordion">
+		<Accordion.Item eventKey="0" className="sidebar__accordion-item">
 		  <Accordion.Header>Категорії</Accordion.Header>
 		  <Accordion.Body>
 			<div className="sidebar__category">

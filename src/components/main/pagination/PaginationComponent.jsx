@@ -3,7 +3,7 @@ import "./pagintaion.scss";
 //Components
 import {Pagination} from "react-bootstrap";
 //Hooks
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useParams} from "react-router-dom";
 export const PaginationComponent = ({amountGoodsOnPage, totalAmountGoods, category}) =>{
 	const {numberOfPage = 1} = useParams();
@@ -22,14 +22,14 @@ export const PaginationComponent = ({amountGoodsOnPage, totalAmountGoods, catego
 		)
 	}
  return(
-	<section className="main__pagination">
+	<section className="main__pagination-section">
 		<a href="#goods-box" onClick={() => {
 			category ? navigate(`/goods/${category}/path/${+numberOfPage-1}`) : navigate(`/goods/path/${+numberOfPage-1}`);
 		}}>
 			<button className="main__pagination-button" disabled={+numberOfPage === 1}>Попередня</button>
 		</a>
 
-    	<Pagination>{pageNumbers}</Pagination>
+    	<Pagination className="main__pagination">{pageNumbers}</Pagination>
 
 		<a href="#goods-box" onClick={() => {
 			category ? navigate(`/goods/${category}/path/${+numberOfPage+1}`) : navigate(`/goods/path/${+numberOfPage+1}`);

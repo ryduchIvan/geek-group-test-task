@@ -6,10 +6,10 @@ import "./filterGender.scss";
 export const FilterGender = () => {
 	const navigate = useNavigate();
 	return (
-		<Accordion defaultActiveKey="0">
-		<Accordion.Item eventKey="0">
+		<Accordion defaultActiveKey="0" className="sidebar__accordion">
+		<Accordion.Item eventKey="0" className="sidebar__accordion-item">
 		  <Accordion.Header>Стать</Accordion.Header>
-		  <Accordion.Body>
+		  <Accordion.Body >
 			<div className="sidebar__gender">
 			<label className="sidebar__category-laber label" onClick={() =>{
 					navigate("/goods");

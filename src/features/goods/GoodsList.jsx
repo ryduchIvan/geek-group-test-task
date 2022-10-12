@@ -8,7 +8,7 @@ import {useParams} from "react-router-dom";
 import Preload from "../../assets/icons/preload.svg";
 //Actions
 import {loadGoods} from "./goods-slice";
-import {filteringByAscendingPrices, filteringByDecreasingPrices, filteringByDefault} from "./goods-slice";
+import {filteringByAscendingPrices, filteringByDecreasingPrices} from "./goods-slice";
 //Select
 import {selectGoods} from "./goods-slice";
 import { filtredGoods } from "./goods-slice";
@@ -16,10 +16,9 @@ import { selectSearch } from "../search/search-slice";
 //Components
 import {GoodsItem} from "./goodsItem/GoodsItem";
 import {PaginationComponent} from "../../components/main/pagination/PaginationComponent";
-function GoodsList() {
+export const  GoodsList = () => {
 	//const [grid , setGrid] = useState(4);
 	const [amountGoodsOnPage, setAmountGoodsOnPage] = useState(9);
-	const [gridFormat, setGridFormat] = useState(4);
 	const {category, numberOfPage = 1} = useParams();//get url
 	const dispatch = useDispatch();
 	const {status, list, error} = useSelector(selectGoods);//get goods object
@@ -47,12 +46,6 @@ function GoodsList() {
 	const firstGoodsIndex = lastGoodsIndex - amountGoodsOnPage;
 	const paginationGoods = filteredList.slice(firstGoodsIndex, lastGoodsIndex);
 
-	const setFourWayOfGrid = () =>{
-		setGridFormat(4)
-	}
-	const setTwoWayOfGrid = () =>{
-		setGridFormat(2);
-	}
 	return(
 		<>
 		<div className="goods__box" id="goods-box">
@@ -64,7 +57,7 @@ function GoodsList() {
 					status === "rejected" && <p className="error">{error}</p>	
 				}
 				{
-					status === "fuilfilled" && paginationGoods.map((good) => <GoodsItem key={good.id} {...good} gridFormat={gridFormat} />)
+					status === "fuilfilled" && paginationGoods.map((good) => <GoodsItem key={good.id} {...good} />)
 				}
 				{
 					status === "fuilfilled" && paginationGoods.length < 1 && <h2>Товару не знайдено</h2>
@@ -80,7 +73,6 @@ function GoodsList() {
 	)
 }
 
-export {GoodsList};
 
 
 

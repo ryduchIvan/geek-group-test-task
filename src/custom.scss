@@ -1,8 +1,9 @@
 @import "variabels.scss";
-.navbar {
+/* File to change boostrap styles*/
+.header__navbar {
 	--bs-navbar-padding-y: none;
 }
-.navbar-nav {
+.header__navbar-nav {
 	--bs-nav-link-padding-y: none;
 }
 .header__select {
@@ -17,20 +18,21 @@
 	border-radius: 100px;
 	max-width: 200px;
 }
-.card {
+.goods__card {
 	border: 1px solid #eff1f1;
 	padding-top: 24px;
 }
-.card-title {
+.goods__card-title {
 	color: $black;
 	font-size: 14px;
 }
-.accordion {
+.sidebar__accordion {
 	--bs-accordion-bg: #eff1f1;
 	--bs-accordion-active-bg: #eff1f1;
 	--bs-accordion-active-color: $lightBlack;
+	--bs-accordion-btn-active-icon: url(./assets/icons/arrow-select.svg);
 }
-.accordion-item {
+.sidebar__accordion-item {
 	background-color: white;
 	margin-bottom: 2px;
 	--bs-accordion-border-radius: 0px;
@@ -42,15 +44,14 @@
 	color: $lightBlack;
 	font-family: "Stolzl-book";
 }
-.pagination {
-	--bs-pagination-padding-x: 1rem;
-	--bs-pagination-padding-y: 1rem;
-	--bs-pagination-color: $silver;
+.main__pagination {
+	--bs-pagination-color: none;
 	--bs-pagination-border-width: 1.6px;
-	--bs-pagination-border-color: $silver;
-	--bs-pagination-active-color: $silver;
+	--bs-pagination-border-color: none;
+	--bs-pagination-active-color: none;
 	--bs-pagination-active-bg: none;
 	--bs-pagination-font-size: 10px;
 	--bs-pagination-hover-color: none;
 	--bs-pagination-hover-bg: none;
+	--bs-pagination-bg: none;
 }

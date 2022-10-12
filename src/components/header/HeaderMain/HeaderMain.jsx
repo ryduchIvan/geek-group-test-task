@@ -21,9 +21,9 @@ import { FavoriteList } from "features/favorite/FavoriteList";
 import { BurgerMenu } from "../burgerMenu/BurgerMenu";
 import { Burger } from "../burger/Burger";
 export const HeaderMain = () =>{
-	const [isCart, setCart] = useState(false);
-	const [isFavorite, setFavorite] = useState(false);
-	const [isBurgerMenu, setBurgerMenu] = useState(false);
+	const [isCart, setCart] = useState(false);//made state for handle cart 
+	const [isFavorite, setFavorite] = useState(false);//made state for handle favorite items 
+	const [isBurgerMenu, setBurgerMenu] = useState(false);//made state for handle burger
 	const favorite = useSelector(selectFavorite);
 	const {items} = useSelector(selectCart);
 	const toggle = (state, setState) =>{

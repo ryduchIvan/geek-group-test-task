@@ -11,7 +11,7 @@ function Sidebar() {
 		<div className="sidebar__title">
 				Фільтри
 			</div>
-			<div className="row mt-4 sidebar__filter-list">
+			<div className="row  sidebar__filter-list">
 				<div className="col-6 col-md-4 col-lg-12 sidebar__filter-item">
 					<FilterCategory/>
 				</div>

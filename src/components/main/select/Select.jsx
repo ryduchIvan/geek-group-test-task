@@ -1,11 +1,5 @@
 //Hooks
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {useParams} from "react-router-dom";
-//Selector
-import { selectSearch } from "features/search/search-slice";
-//Actions
-
+import {useDispatch, } from "react-redux";
 import { setMethod } from "features/search/search-slice";
 import Form from 'react-bootstrap/Form';
 import "./select.scss";

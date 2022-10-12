@@ -11,32 +11,11 @@
 	padding-bottom: 14px;
 }
 .footer__row {
-	display: flex;
-	justify-content: space-between;
-	border-bottom: 1px solid #c4c7c7;
-	padding-bottom: 72px;
-	flex-wrap: wrap;
+	border-bottom: 1.6px solid #e0e3e3;
+	padding-bottom: 50px;
 }
 .footer__img {
 }
 .footer__data {
 	margin-top: 24px;
-}
-@media (max-width: 1050px) {
-	.footer__list {
-		flex: 0 1 50%;
-		margin-bottom: 35px;
-		text-align: center;
-	}
-	.footer__row {
-		text-align: center;
-	}
-	.footer__img {
-		margin: 0px auto;
-	}
-}
-@media (max-width: 620px) {
-	.footer__list {
-		flex: 0 1 100%;
-	}
 }

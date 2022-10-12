@@ -7,7 +7,6 @@ import {Route, Routes} from "react-router-dom";
 import {HeaderIndex} from "./components/header/HeaderIndex";
 import { Footer } from "./components/footer/Footer";
 import {Homepage} from "./pages/homepage/Homepage";
-//import { GoodsList } from "./features/goods/GoodsList";
 import { Catalog } from "./pages/catalog/Catalog";
 import { NotFound } from "./pages/NotFound/NotFound";
 function App() {

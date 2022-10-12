@@ -36,8 +36,8 @@ function CartItem(props) {
 						}}/>
 				</div>
 			</div>
-			</div>
 		</div>
+	</div>
 	)
 }
 export{CartItem}

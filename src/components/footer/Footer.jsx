@@ -12,11 +12,11 @@ function Footer() {
 	<footer class="footer" >
 		<div class="footer__container container">
 			<div class="footer__content">
-				<div class="footer__row">
+				<div class="row footer__row">
 					<FooterList list={footerFirstList}/>
 					<FooterList list={footerSecondList}/>
 					<FooterList list={footerThirdList}/>
-					<ul className="footer__list">
+					<ul className="col-12 col-md-6 col-xl-3 footer__list">
 						<li className="footer__list-link">Мобільний додаток</li>
 						<img src={GooglePlay} alt="google-play" className="footer__img"/>
 					</ul>

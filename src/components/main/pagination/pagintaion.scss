@@ -1,13 +1,11 @@
 @import "variabels.scss";
-.main__pagination {
+.main__pagination-section {
 	display: flex;
 	justify-content: center;
 	margin-top: 59px;
 }
 .main__pagination-number {
 	cursor: pointer;
-	width: 32px;
-	height: 32px;
 	margin-left: 8px;
 	display: flex;
 	justify-content: center;
@@ -39,5 +37,8 @@
 	}
 	&:last-child {
 		margin-left: 8px;
+	}
+	&:disabled {
+		cursor: default;
 	}
 }

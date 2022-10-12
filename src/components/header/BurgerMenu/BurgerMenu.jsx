@@ -2,7 +2,6 @@
 import "./burgerMenu.scss";
 //Components
 import { Search } from "features/search/Search.jsx";
-import { useRef } from "react";
 import {Link} from "react-router-dom";
 export const BurgerMenu = ({status, closeBurgerMenu}) =>{
 	const handleBurgerMenu =(event) =>{

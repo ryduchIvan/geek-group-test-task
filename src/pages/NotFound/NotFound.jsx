@@ -5,8 +5,8 @@ function NotFound(params) {
 	return(
 		<>
 		<div className="faker">
-		<h1>Gage not found. Please click on button</h1>
-			<Link to="/" className = "btn">Go to home</Link>
+		<h1>This Page not found. Please click on button</h1>
+			<Link to="/" className="btn-main">Go to home</Link>
 		</div>
 		</>
 	)

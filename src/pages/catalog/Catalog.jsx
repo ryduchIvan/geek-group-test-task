@@ -1,5 +1,5 @@
 import { MainIndex } from "components/main/MainIndex";
-function Catalog(params) {
+function Catalog() {
 	return (
 		<MainIndex/>
 	)

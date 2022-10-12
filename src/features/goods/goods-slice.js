@@ -69,9 +69,7 @@ const goodsSlice = createSlice({
 export const goodsReducer = goodsSlice.reducer;
 //Actions
 export const {setCurrentGoods, filteringByAscendingPrices, filteringByDecreasingPrices ,filteringByDefault} = goodsSlice.actions;
-//Select]
-
-
+//Select
 export const selectGoods = store => store.goods;
 export const filtredGoods = (goods, filter = "", search, firstPrice, secondPrice) =>{
 	return goods.filter(good => 
