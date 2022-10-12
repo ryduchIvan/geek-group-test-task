@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/geek-group-test-task/static/css/main.0cc5ff95.css",
-    "main.js": "/geek-group-test-task/static/js/main.7e481985.js",
+    "main.js": "/geek-group-test-task/static/js/main.aabe9af2.js",
     "static/js/787.66cd6b81.chunk.js": "/geek-group-test-task/static/js/787.66cd6b81.chunk.js",
     "static/media/company.svg": "/geek-group-test-task/static/media/company.5f455c18bc050102bae951663066e22a.svg",
     "static/media/Stolzl-Book.woff2": "/geek-group-test-task/static/media/Stolzl-Book.a838b6f4a4c2ec153c03.woff2",
@@ -26,11 +26,11 @@
     "static/media/arrow.svg": "/geek-group-test-task/static/media/arrow.db3ac2f7bd5ecd6bb9a5b4ff25201f83.svg",
     "static/media/arrow-select.svg": "/geek-group-test-task/static/media/arrow-select.8fa3e5582e1c445ef50d.svg",
     "main.0cc5ff95.css.map": "/geek-group-test-task/static/css/main.0cc5ff95.css.map",
-    "main.7e481985.js.map": "/geek-group-test-task/static/js/main.7e481985.js.map",
+    "main.aabe9af2.js.map": "/geek-group-test-task/static/js/main.aabe9af2.js.map",
     "787.66cd6b81.chunk.js.map": "/geek-group-test-task/static/js/787.66cd6b81.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0cc5ff95.css",
-    "static/js/main.7e481985.js"
+    "static/js/main.aabe9af2.js"
   ]
 }
